@@ -1,5 +1,5 @@
 services: 
   web: 
-    build: ${DOCKER_HUB_USERNAME}/flask-app-ecs:latest
+    image: ${DOCKER_HUB_USERNAME}/flask-app-ecs:latest
     ports:
       - "80:80"
