@@ -25,6 +25,8 @@ jobs:
 
       - name: Deploy with Docker Compose
         run: |
-          docker compose -f dockercompose.yml up -d --build
+           docker compose -f dockercompose.yml down --rmi all --volumes --remove-orphans
+           docker compose -f dockercompose.yml build --no-cache
+           docker compose -f dockercompose.yml up -d
             
           
