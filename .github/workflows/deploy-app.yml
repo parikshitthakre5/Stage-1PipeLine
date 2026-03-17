@@ -18,6 +18,6 @@ jobs:
 
       - name: Deploy with Docker Compose
         run: |
-          docker-compose -f Docker-compose.yml up -d 
+          docker compose up -d --build
             
           
